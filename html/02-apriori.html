@@ -12011,7 +12011,7 @@ $\{x_2, x_3\} \rightarrow x_1$, $...$, $\{x_1, x_2\} \rightarrow x_4$ y así suc
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>En la segunda fase, para todas las combinaciones de 2, 3, ... ítems, se generan todas las reglas posibles y se evalúa su confianza. Se seleccionan aquellas que cumplen con la confianza mínima requerida. Si la combinación {x1, x2} cumplio con el soporte mínimo, entonces se consideran las reglas {x1} $\to$ {x2} y {x2} $\to$ {x1}. Nótese que es posible condierar reglas con varios elementos en el consecuente como por ejemplo {x1} $\to$ {x2, x3}.</p>
+<p>En la segunda fase, para todas las combinaciones de 2, 3, ... ítems, se generan todas las reglas posibles y se evalúa su confianza. Se seleccionan aquellas que cumplen con la confianza mínima requerida. Si la combinación {x1, x2} cumplio con el soporte mínimo, entonces se consideran las reglas {x1} $\to$ {x2} y {x2} $\to$ {x1}. Nótese que es posible considerar reglas con varios elementos en el consecuente como por ejemplo {x1} $\to$ {x2, x3}.</p>
 
 </div>
 </div>
@@ -12035,18 +12035,21 @@ $\{x_2, x_3\} \rightarrow x_1$, $...$, $\{x_1, x_2\} \rightarrow x_4$ y así suc
 
 <pre><code> Combinación    Reglas           Confianza   Lift  Seleccionada
 ----------------------------------------------------------------
- {x1, x2}       {x1} -&gt; {x2}           86%      ?            Si
-                {x2} -&gt; x1               ?      ?             ?
+ {x1, x2}       {x1}     -&gt; {x2}       86%      ?            Si
+                {x2}     -&gt; {x1}         ?      ?             ?
 ----------------------------------------------------------------
- {?, ?}         {?} -&gt; {?}               ?      ?             ?
-                {?} -&gt; {?}               ?      ?             ?
+ {?, x3}        {?}      -&gt; {?}          ?      ?             ?
+                {x3}     -&gt; {?}          ?      ?             ?
 ----------------------------------------------------------------
- {?, ?, ?}      {?}    -&gt; {?, ?}         ?      ?             ?
-                {?}    -&gt; {?, ?}         ?      ?             ?
-                {?}    -&gt; {?, ?}         ?      ?             ?
-                {?, ?} -&gt; {?}            ?      ?             ?
-                {?, ?} -&gt; {?}            ?      ?             ?
-                {?, ?} -&gt; {?}            ?      ?             ?
+ {x2, ?}        {?}      -&gt; {x2}         ?      ?             ?
+                {?}      -&gt; {?}          ?      ?             ?
+----------------------------------------------------------------
+ {x1, x2, x3}   {?}      -&gt; {?, ?}       ?      ?             ?
+                {?}      -&gt; {?, ?}       ?      ?             ?
+                {x3}     -&gt; {x1, x2}   67%      ?            No
+                {?, x2}  -&gt; {?}          ?      ?             ?
+                {?, ?}   -&gt; {x2}         ?      ?             ?
+                {x3, x1} -&gt; {?}          ?      ?             ?
 ----------------------------------------------------------------
 
 </code></pre>

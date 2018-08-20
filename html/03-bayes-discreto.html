@@ -12122,8 +12122,8 @@ $$\text{Pr}(A\text{ and }B) = \text{Pr}(A \; | \; B)\text{ Pr}({B}) =  \text{Pr}
 
 <pre><code>               w1    w2    w3    w4    w5
 ----------------------------------------------
-Ocurre          ?     ?     ?     ?     ?
-No ocurre       ?     ?     ?     ?     ?</code></pre>
+Ocurre       3/14     ?     ?     ?   1/14
+No ocurre       ?     ?   12/14   ?     ?</code></pre>
 </li>
 <li><p>Probabilidad conjunta $\text{Pr}(w_i, \text{Tipo})$:</p>
 
@@ -12249,8 +12249,8 @@ $$</p>
 
 <pre><code>                w1    w2    w3    w4    w5
 ----------------------------------------------
-Ocurre           ?     ?     ?     ?     ?
-No ocurre        ?     ?     ?     ?     ?</code></pre>
+Ocurre        5/24     ?     ?     ?   3/24
+No ocurre        ?     ?   20/24   ?     ?</code></pre>
 </li>
 </ul>
 <ul>
@@ -12263,28 +12263,28 @@ ham       ?     ?  1/21     ?     ?        ?</code></pre>
 </li>
 <li><p>Complete la tabla de probabilidad condicional $\text{Pr}(w_i \, | \, \text{Tipo})$:</p>
 
-<pre><code>Tipo     w1    w2    w3    w4    w5   Pr(tipo)
-------------------------------------------------     
-spam   4/11     ?     ?     ?     ?          ?
-ham       ?     ?     ?  3/10     ?          ?</code></pre>
+<pre><code>Tipo     w1    w2    w3    w4    w5   
+----------------------------------------------    
+spam   4/11     ?     ?     ?   1/11    
+ham       ?     ?   1/13     ?    ?      </code></pre>
 </li>
 <li><p>Complete la tabla de probabilidad condicional $\text{Pr}(\text{not } w_i \, |  \, \text{Tipo})$:</p>
 
-<pre><code>Tipo     w1    w2    w3    w4    w5   Pr(tipo)
-------------------------------------------------     
-spam      ?  9/11     ?     ?     ?          ?
-ham       ?     ?     ?     ?  8/10          ? </code></pre>
+<pre><code>Tipo     w1    w2    w3    w4    w5   
+----------------------------------------------     
+spam      ?  9/11     ?     ?     ?         
+ham       ?     ?     ?     ?  11/13          </code></pre>
 </li>
 <li><p>Calcule la probabilidad de que el mensaje $w_1w_4$ sea spam:</p>
 </li>
 </ul>
 <p>$$\text{Pr}(\text{spam}~|~w_1~\text{and}~\text{not}~w_2~\text{and}~\text{not}~w_3~\text{and}~w_4~\text{and}~\text{not}~w_5)$$</p>
-<p>R/ 39.07%</p>
+<p>R/ 36.56%</p>
 <ul>
 <li>Calcule la probabilidad de que el mensaje sea $w_1w_4$ válido:</li>
 </ul>
 <p>$$\text{Pr}(\text{ham}~|~w_1~\text{and}~\text{not}~w_2~\text{and}~\text{not}~w_3~\text{and}~w_4~\text{and}~\text{not}~w_5)$$</p>
-<p>R/ 30.03%</p>
+<p>R/ 27.49%</p>
 
 </div>
 </div>
